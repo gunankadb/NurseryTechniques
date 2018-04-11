@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:161983803422:android:8edb74a611e67158",
         "android_client_info": {
-          "package_name": "com.treepedia.meghalaya.meghalayatreepedia"
+          "package_name": "com.treepedia.meghalaya.nurserytechniques"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "161983803422-c9pch3nkrhrero3rse5fbk6k1ghohe5u.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.treepedia.meghalaya.meghalayatreepedia",
+            "package_name": "com.treepedia.meghalaya.nurserytechniques",
             "certificate_hash": "629caf4493650f987a1c1e0924db9357d78c435f"
           }
         },

@@ -1,25 +1,18 @@
-package com.treepedia.meghalaya.meghalayatreepedia;
-import static com.treepedia.meghalaya.meghalayatreepedia.Constant.TREE_FIELDS_COUNT;
-import static com.treepedia.meghalaya.meghalayatreepedia.Constant.TEXT_FONT_COLOR;
-import static com.treepedia.meghalaya.meghalayatreepedia.Constant.TREE_FIELDS;
+package com.treepedia.meghalaya.nurserytechniques;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import com.treepedia.meghalaya.nurserytechniques.R;
 
-import au.com.bytecode.opencsv.CSVReader;
+import java.util.ArrayList;
 
 public class DisplayActivity extends Activity {
     private ImageView mImageView;
@@ -39,7 +32,7 @@ public class DisplayActivity extends Activity {
             final String imageID = "i"+ (String)selected_tree.toArray()[0] ;
             mImageView.setImageResource(getResources().getIdentifier(imageID, "drawable", getPackageName()));
 
-            final String[] headings = TREE_FIELDS ;
+            final String[] headings = Constant.TREE_FIELDS ;
             //headings[TREE_FIELDS_COUNT];
             try
             {
@@ -52,7 +45,7 @@ public class DisplayActivity extends Activity {
                         // Initialize a TextView for ListView each Item
                         TextView tv1 = (TextView) view.findViewById(android.R.id.text1);
                         TextView tv2 = (TextView) view.findViewById(android.R.id.text2);
-                    if (position < TREE_FIELDS_COUNT )
+                    if (position < Constant.TREE_FIELDS_COUNT )
                     {
                         final String tree_test = (String) selected_tree.toArray()[1];
                         if (tree_test.contains ("Nursery"))
@@ -74,7 +67,7 @@ public class DisplayActivity extends Activity {
                         tv2.setText("");
                     }
                     // Generate ListView Item using TextView
-                    tv1.setTextColor(Color.parseColor(TEXT_FONT_COLOR));
+                    tv1.setTextColor(Color.parseColor(Constant.TEXT_FONT_COLOR));
                     tv2.setTextColor(Color.BLACK);
                     return view;
                 };

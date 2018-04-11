@@ -1,4 +1,4 @@
-package com.treepedia.meghalaya.meghalayatreepedia;
+package com.treepedia.meghalaya.nurserytechniques;
 
 import org.junit.Test;
 

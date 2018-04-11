@@ -1,4 +1,4 @@
-package com.treepedia.meghalaya.meghalayatreepedia;
+package com.treepedia.meghalaya.nurserytechniques;
 
 //import android.Manifest;
 //import android.app.Activity;
@@ -10,7 +10,6 @@ import android.os.Bundle;
 //import android.support.annotation.NonNull;
 //import android.support.design.widget.FloatingActionButton;
 //import android.support.design.widget.Snackbar;
-import android.support.v4.app.ActivityCompat;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -42,19 +41,16 @@ import android.widget.TextView;
 
 //import java.io.File;
 //import java.io.FileReader;
+import com.treepedia.meghalaya.nurserytechniques.R;
+
 import java.io.InputStream;
 import java.io.InputStreamReader;
 //import java.lang.reflect.Array;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 //import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
-import static com.treepedia.meghalaya.meghalayatreepedia.Constant.TREE_COUNT;
-import static com.treepedia.meghalaya.meghalayatreepedia.Constant.TREE_FIELDS_COUNT;
-import static com.treepedia.meghalaya.meghalayatreepedia.Constant.TEXT_FONT_COLOR;
-import static com.treepedia.meghalaya.meghalayatreepedia.Constant.TREE_FILE_NAME;
+
 import au.com.bytecode.opencsv.CSVReader;
 
 
@@ -88,23 +84,23 @@ public class MainActivity extends AppCompatActivity
                         // Successfully downloaded data to local file
         try{
             final ListView lv = (ListView) findViewById(R.id.lv);
-            final String[] tree_names = new String[TREE_COUNT] ;
-            final String[] tree_names_for_search = new String[TREE_COUNT] ;
+            final String[] tree_names = new String[Constant.TREE_COUNT] ;
+            final String[] tree_names_for_search = new String[Constant.TREE_COUNT] ;
             final HashMap<String, String[]> trees_hash = new HashMap<String, String[]>() ;
             int trees_index = 0;
             //CSVReader reader = new CSVReader(new FileReader(localFile.getAbsolutePath()));
-            InputStream csvStream = assetManager.open(TREE_FILE_NAME);
+            InputStream csvStream = assetManager.open(Constant.TREE_FILE_NAME);
             InputStreamReader csvStreamReader = new        InputStreamReader(csvStream);
             CSVReader csvReader = new CSVReader(csvStreamReader);
             String [] nextLine;
-            final String [][] trees_temp = new String[TREE_COUNT][TREE_FIELDS_COUNT ];
+            final String [][] trees_temp = new String[Constant.TREE_COUNT][Constant.TREE_FIELDS_COUNT ];
             while ((nextLine = csvReader.readNext()) != null) {
                 //nextLine[] is an array of values from the line
                 if (trees_index > 0) {
                     tree_names[trees_index - 1] = nextLine[1];
                     tree_names_for_search[trees_index - 1] = nextLine[1] + ", " + nextLine[2];
                     //trees_temp[trees_index - 1] = nextLine;
-                    System.arraycopy(nextLine, 0 , trees_temp[trees_index - 1], 0,TREE_FIELDS_COUNT );
+                    System.arraycopy(nextLine, 0 , trees_temp[trees_index - 1], 0, Constant.TREE_FIELDS_COUNT );
                     trees_hash.put(tree_names[trees_index - 1], trees_temp[trees_index - 1]);
                     trees_index++;
                 }
@@ -114,7 +110,7 @@ public class MainActivity extends AppCompatActivity
             // Create a List from String Array elements
 
             //final List<String> trees_list = new ArrayList<String>(Arrays.asList(tree_names));
-            final String [][] trees = new String[trees_index - 1][TREE_FIELDS_COUNT ];
+            final String [][] trees = new String[trees_index - 1][Constant.TREE_FIELDS_COUNT ];
             System.arraycopy(trees_temp, 0 , trees, 0,trees_index - 1);
             // Create an ArrayAdapter from List
 
@@ -130,7 +126,7 @@ public class MainActivity extends AppCompatActivity
                     mytree_array = mytree.split(",") ;
                     tv1.setText(trees_hash.get(mytree_array[0])[1]);
                     tv2.setText(trees_hash.get(mytree_array[0])[2]);
-                    tv1.setTextColor(Color.parseColor(TEXT_FONT_COLOR));
+                    tv1.setTextColor(Color.parseColor(Constant.TEXT_FONT_COLOR));
                     tv2.setTextColor(Color.BLACK);
 
                     return view;

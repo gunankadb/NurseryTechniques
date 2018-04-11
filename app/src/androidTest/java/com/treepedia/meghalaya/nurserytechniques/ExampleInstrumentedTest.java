@@ -1,4 +1,4 @@
-package com.treepedia.meghalaya.meghalayatreepedia;
+package com.treepedia.meghalaya.nurserytechniques;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

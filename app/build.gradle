@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.treepedia.meghalaya.meghalayatreepedia"
+        applicationId "com.treepedia.meghalaya.nurserytechniques"
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
