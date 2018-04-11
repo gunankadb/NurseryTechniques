@@ -52,10 +52,21 @@ public class DisplayActivity extends Activity {
                         // Initialize a TextView for ListView each Item
                         TextView tv1 = (TextView) view.findViewById(android.R.id.text1);
                         TextView tv2 = (TextView) view.findViewById(android.R.id.text2);
-                    if (position < TREE_FIELDS_COUNT ) {
-                        tv1.setText(headings[position]);
-                        tv2.setText((String) selected_tree.toArray()[position]);
-
+                    if (position < TREE_FIELDS_COUNT )
+                    {
+                        final String tree_test = (String) selected_tree.toArray()[1];
+                        if (tree_test.contains ("Nursery"))
+                        {
+                            tv1.setText(" ");
+                            if (position != 0) {
+                                tv2.setText((String) selected_tree.toArray()[position]);
+                            }
+                        }
+                        else
+                        {
+                            tv1.setText(headings[position]);
+                            tv2.setText((String) selected_tree.toArray()[position]);
+                        }
                     }
                     else
                     {
