@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "161983803422",
+    "firebase_url": "https://meghalayatreepedia.firebaseio.com",
+    "project_id": "meghalayatreepedia",
+    "storage_bucket": "meghalayatreepedia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161983803422:android:8edb74a611e67158",
+        "android_client_info": {
+          "package_name": "com.treepedia.meghalaya.meghalayatreepedia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "161983803422-c9pch3nkrhrero3rse5fbk6k1ghohe5u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.treepedia.meghalaya.meghalayatreepedia",
+            "certificate_hash": "629caf4493650f987a1c1e0924db9357d78c435f"
+          }
+        },
+        {
+          "client_id": "161983803422-rsr00lstfe7qj0nj9d1njni9mskcrtd9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnc9y_ed9fXLKqL0S38OB5CpiBZNhS_vc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161983803422-rsr00lstfe7qj0nj9d1njni9mskcrtd9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
